@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 
-export function useFetchPilotos(url){
+export function useFetch(url){
     const [data, setData]=useState(null);
     const [loading,setLoading] = useState(true);
     const [ error, setError] = useState(null);

@@ -1,12 +1,28 @@
+import {useFetch} from "../useFetch.js";
+
 export function TablaAlimentos(){
     
+    const {data, loading, error}=useFetch(
+        
+    );
+
     return(
-        <div className='container m-12 w-auto flex flex-nowrap mx-auto'>
+        <div className='container m-12 w-1/2 flex flex-nowrap mx-auto'>
             
           
                
                     
-                                
+        <div>
+            <select name="" id="">
+                <option value="">
+
+                </option>
+
+                <option value="">
+                    
+                </option>
+            </select>
+        </div>                       
 
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
