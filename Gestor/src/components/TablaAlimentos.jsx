@@ -1,10 +1,36 @@
+import { useState } from "react";
 import {useFetch} from "../useFetch.js";
+
+
+/*
+
+const origenAnimal= 'origenAnimal';
+
+const origenVegetal= 'origenVegetal';
+
+const suplementos= 'suplementos';
+
+const legumbresFrutosSecos= 'legumbresFrutosSecos';
+
+const granosCereales= 'granosCereales';
+
+const [tablaActual, setTablaActual]= useState('');
+const elegirTabla = () =>{
+    
+}
+
+*/
+
+
+
 
 export function TablaAlimentos(){
     
     const {data, loading, error}=useFetch(
-        
+        'https://appfit.onrender.com/OrigenAnimal/get'
     );
+
+
 
     return(
         <div className='container m-12 w-1/2 flex flex-nowrap mx-auto'>
@@ -24,6 +50,8 @@ export function TablaAlimentos(){
             </select>
         </div>                       
 
+       
+          
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <div class="pb-4 bg-white dark:bg-gray-900">
@@ -63,7 +91,11 @@ export function TablaAlimentos(){
                 </th>
             </tr>
         </thead>
+
         <tbody>
+        {loading && <tr><td colSpan="3">Loading...</td></tr>}
+
+        
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
